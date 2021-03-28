@@ -7,7 +7,7 @@ KAFKA_ENDPOINT = getenv('KAFKA_ENDPOINT')
 
 
 class Topics(enum.Enum):
-    EVENTS = "events"
+    EVENTS = getenv('KAFKA_TOPIC')
 
 
 maximum_try_count = 10
