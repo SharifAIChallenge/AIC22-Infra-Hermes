@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM reg.aichallenge.ir/python:3.10
 
 WORKDIR /home
 ADD ./requirements.txt ./requirements.txt
