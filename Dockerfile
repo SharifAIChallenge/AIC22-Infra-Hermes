@@ -7,5 +7,5 @@ ADD ./requirements.txt ./requirements.txt
 RUN pip install -r ./requirements.txt
 ADD ./ ./
 
-CMD["python3", "event_consumer.py"]
+CMD ["python3", "event_consumer.py"]
 
