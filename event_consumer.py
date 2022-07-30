@@ -2,6 +2,7 @@ import enum
 from kafka import KafkaConsumer
 import backend_cli
 from os import getenv
+from datetime import datetime
 
 KAFKA_ENDPOINT = getenv('KAFKA_ENDPOINT')
 
@@ -24,7 +25,11 @@ print("consumer ready...")
 for message in consumer:
     try:
         data = message.value.decode("utf-8")
+        print('--------------')
         print(data)
+        print('**************')
+        print(datetime.now())
+        print('--------------')
     except Exception as e:
         print(f'error in read message: {message}, err: {e}')
         continue
