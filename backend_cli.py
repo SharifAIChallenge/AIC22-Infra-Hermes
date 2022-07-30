@@ -15,5 +15,6 @@ class BackendCli:
             result = requests.post(BACKEND_URL, json=data, headers={'Authorization': getenv('BACKEND_URL_TOKEN')})
             return True
         except requests.exceptions.RequestException as e:
-            print(e)
+            print('ERROR', flush=True)
+            print(e, flush=True)
             return False
