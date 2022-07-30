@@ -1,4 +1,5 @@
 import enum
+from tokenize import group
 from kafka import KafkaConsumer
 import backend_cli
 from os import getenv
@@ -25,11 +26,11 @@ print("consumer ready...")
 for message in consumer:
     try:
         data = message.value.decode("utf-8")
-        print('---------------')
+        print('---------------', flush=True)
         print(data)
-        print('***************')
+        print('***************', flush=True)
         print(datetime.now())
-        print('---------------')
+        print('---------------', flush=True)
     except Exception as e:
         print(f'error in read message: {message}, err: {e}')
         continue
