@@ -2,8 +2,8 @@ import requests
 from os import getenv
 
 
-# BACKEND_URL = getenv('BACKEND_URL')
-BACKEND_URL = 'https://google.com'
+BACKEND_URL = getenv('BACKEND_URL')
+# BACKEND_URL = 'https://google.com'
 
 print("backend client ready..")
 
