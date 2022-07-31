@@ -13,7 +13,7 @@ class BackendCli:
     def send_event(data):
         try:
             result = requests.post(BACKEND_URL, json=data, headers={'Authorization': getenv('BACKEND_URL_TOKEN'), 'Content-Type': 'application/json; charset=utf-8'})
-            print(result.status_code, result.data,flush=True)
+            print(result.status_code, result.json,flush=True)
             return True
         except requests.exceptions.RequestException as e:
             print(e, flush=True)
