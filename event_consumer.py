@@ -4,6 +4,7 @@ from kafka import KafkaConsumer
 import backend_cli
 from os import getenv
 from datetime import datetime
+import json
 
 KAFKA_ENDPOINT = getenv('KAFKA_ENDPOINT')
 
@@ -27,7 +28,7 @@ for message in consumer:
     try:
         data = message.value.decode("utf-8")
         print(data, type(data))
-
+        data = json.loads(data)
     except Exception as e:
         print(f'error in read message: {message}, err: {e}')
         continue
