@@ -26,11 +26,8 @@ print("consumer ready...")
 for message in consumer:
     try:
         data = message.value.decode("utf-8")
-        print('---------------', flush=True)
-        print(data)
-        print('***************', flush=True)
-        print(datetime.now())
-        print('---------------', flush=True)
+        print(data, type(data))
+
     except Exception as e:
         print(f'error in read message: {message}, err: {e}')
         continue
