@@ -16,6 +16,5 @@ class BackendCli:
             print(result.status_code, result.data,flush=True)
             return True
         except requests.exceptions.RequestException as e:
-            print('ERROR', flush=True)
             print(e, flush=True)
             return False
