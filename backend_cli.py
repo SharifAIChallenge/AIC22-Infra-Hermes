@@ -3,7 +3,7 @@ from os import getenv
 
 
 BACKEND_URL = getenv('BACKEND_URL')
-BACKEND_STG_URL = getenv('STG_BACKEND_URL')
+BACKEND_STG_URL = getenv('BACKEND_STG_URL')
 # BACKEND_URL = 'https://google.com'
 
 print("backend client ready..")
